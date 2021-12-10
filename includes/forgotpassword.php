@@ -44,7 +44,7 @@ return true;
       <div class="modal-header">
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title">Password Recovery</h3>
+        <h3 class="modal-title">Tạo lại password</h3>
       </div>
       <div class="modal-body">
         <div class="row">
@@ -68,8 +68,8 @@ return true;
                 </div>
               </form>
               <div class="text-center">
-                <p class="gray_text">For security reasons we don't store your password. Your password will be reset and a new one will be send.</p>
-                <p><a href="#loginform" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Back to Login</a></p>
+                <p class="gray_text">Về lý do bảo mật,chúng rồi sẽ không lưu trữ mật khẩu cảu bạn. Mật khẩu của bạn sẽ được tạo mới và gửi lại cho bạn.</p>
+                <p><a href="#loginform" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Quay lại đăng nhập</a></p>
               </div>
             </div>
           </div>
