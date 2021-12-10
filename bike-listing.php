@@ -12,7 +12,7 @@ error_reporting(0);
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>Bike Rental Portal | Bike Listing</title>
+<title>Trang chủ thuê xe| Danh sách xe</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
@@ -59,11 +59,11 @@ error_reporting(0);
   <div class="container">
     <div class="page-header_wrap">
       <div class="page-heading">
-        <h1>Bike Listing</h1>
+        <h1>Danh sách xe</h1>
       </div>
       <ul class="coustom-breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li>Bike Listing</li>
+        <li><a href="#">Trang chủ</a></li>
+        <li>Danh sách xe</li>
       </ul>
     </div>
   </div>
@@ -88,7 +88,7 @@ $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 $cnt=$query->rowCount();
 ?>
-<p><span><?php echo htmlentities($cnt);?> Listings</span></p>
+<p><span><?php echo htmlentities($cnt);?> Danh sách</span></p>
 </div>
 </div>
 
@@ -106,13 +106,13 @@ foreach($results as $result)
           </div>
           <div class="product-listing-content">
             <h5><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>"><?php echo htmlentities($result->BrandName);?> , <?php echo htmlentities($result->VehiclesTitle);?></a></h5>
-            <p class="list-price">$<?php echo htmlentities($result->PricePerDay);?> Per Day</p>
+            <p class="list-price">$<?php echo htmlentities($result->PricePerDay);?> Theo ngày </p>
             <ul>
-              <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> seats</li>
+              <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> Số chỗ ngồi </li>
               <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear);?> model</li>
               <li><i class="fa fa-motorcycle" aria-hidden="true"></i><?php echo htmlentities($result->FuelType);?></li>
             </ul>
-            <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>" class="btn">View Details <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+            <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>" class="btn">Xem chi tiết<span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
           </div>
         </div>
       <?php }} ?>
@@ -122,13 +122,13 @@ foreach($results as $result)
       <aside class="col-md-3 col-md-pull-9">
         <div class="sidebar_widget">
           <div class="widget_heading">
-            <h5><i class="fa fa-filter" aria-hidden="true"></i> Find Your  Bike </h5>
+            <h5><i class="fa fa-filter" aria-hidden="true"></i> Tìm xe của bạn</h5>
           </div>
           <div class="sidebar_filter">
             <form action="search-carresult.php" method="post">
               <div class="form-group select">
                 <select class="form-control" name="brand">
-                  <option>Select Brand</option>
+                  <option>Chọn mẫu</option>
 
                   <?php $sql = "SELECT * from  tblbrands ";
 $query = $dbh -> prepare($sql);
@@ -146,7 +146,7 @@ foreach($results as $result)
               </div>
               <div class="form-group select">
                 <select class="form-control" name="fueltype">
-                  <option>Select Fuel Type</option>
+                  <option>Chọn loại năng lượng</option>
 <option value="Petrol">Petrol</option>
 <option value="Diesel">Diesel</option>
 <option value="CNG">CNG</option>
@@ -154,7 +154,7 @@ foreach($results as $result)
               </div>
 
               <div class="form-group">
-                <button type="submit" class="btn btn-block"><i class="fa fa-search" aria-hidden="true"></i> Search Bike</button>
+                <button type="submit" class="btn btn-block"><i class="fa fa-search" aria-hidden="true"></i> Tìm xe</button>
               </div>
             </form>
           </div>
@@ -162,7 +162,7 @@ foreach($results as $result)
 
         <div class="sidebar_widget">
           <div class="widget_heading">
-            <h5><i class="fa fa-motorcycle" aria-hidden="true"></i> Recently Listed Bikes</h5>
+            <h5><i class="fa fa-motorcycle" aria-hidden="true"></i>Danh sách xe thường dùng</h5>
           </div>
           <div class="recent_addedcars">
             <ul>
@@ -179,7 +179,7 @@ foreach($results as $result)
               <li class="gray-bg">
                 <div class="recent_post_img"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>"><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1);?>" alt="image"></a> </div>
                 <div class="recent_post_title"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>"><?php echo htmlentities($result->BrandName);?> , <?php echo htmlentities($result->VehiclesTitle);?></a>
-                  <p class="widget_price">$<?php echo htmlentities($result->PricePerDay);?> Per Day</p>
+                  <p class="widget_price">$<?php echo htmlentities($result->PricePerDay);?> Theo ngày</p>
                 </div>
               </li>
               <?php }} ?>

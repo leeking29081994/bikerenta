@@ -59,7 +59,7 @@ return true;
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title">Sign Up</h3>
+        <h3 class="modal-title">Đăng ký</h3>
       </div>
       <div class="modal-body">
         <div class="row">
@@ -84,7 +84,7 @@ return true;
                 </div>
                 <div class="form-group checkbox">
                   <input type="checkbox" id="terms_agree" required="required" checked="">
-                  <label for="terms_agree">I Agree with <a href="#">Terms and Conditions</a></label>
+                  <label for="terms_agree">Tôi đồng ý <a href="#">Giải thích về điều kiện</a></label>
                 </div>
                 <div class="form-group">
                   <input type="submit" value="Sign Up" name="signup" id="submit" class="btn btn-block">
@@ -96,7 +96,7 @@ return true;
         </div>
       </div>
       <div class="modal-footer text-center">
-        <p>Already got an account? <a href="#loginform" data-toggle="modal" data-dismiss="modal">Login Here</a></p>
+        <p>Đã có sẵn tài khoản? <a href="#loginform" data-toggle="modal" data-dismiss="modal">Đăng nhập tại đây</a></p>
       </div>
     </div>
   </div>

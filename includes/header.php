@@ -10,11 +10,11 @@
           <div class="header_info">
             <div class="header_widgets">
               <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
-              <p class="uppercase_text">For Support Mail us : </p>
+              <p class="uppercase_text"> Liên hệ Email tới chúng tôi:</p>
               <a href="mailto:info@example.com">serbermz2020@gmail.com</a> </div>
             <div class="header_widgets">
               <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
-              <p class="uppercase_text">Service Helpline Call Us: </p>
+              <p class="uppercase_text">Số điện thoại hỗ trợ: </p>
               <a href="tel:+639079373999">+639079373999</a> </div>
             <div class="social-follow">
               <ul>
@@ -28,7 +28,7 @@
    <?php   if(strlen($_SESSION['login'])==0)
 	{
 ?>
- <div class="login_btn"> <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Register</a> </div>
+ <div class="login_btn"> <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Đăng nhập/Đăng ký</a> </div>
 <?php }
 else{
 
@@ -65,19 +65,19 @@ foreach($results as $result)
 	 echo htmlentities($result->FullName); }}?><i class="fa fa-angle-down" aria-hidden="true"></i></a>
               <ul class="dropdown-menu">
            <?php if($_SESSION['login']){?>
-            <li><a href="profile.php">Profile Settings</a></li>
-              <li><a href="update-password.php">Update Password</a></li>
-            <li><a href="my-booking.php">My Booking</a></li>
-            <li><a href="post-testimonial.php">Post a Testimonial</a></li>
-          <li><a href="my-testimonials.php">My Testimonial</a></li>
-            <li><a href="logout.php">Sign Out</a></li>
+            <li><a href="profile.php">Cài đặt hồ sơ</a></li>
+              <li><a href="update-password.php">Cập nhật password</a></li>
+            <li><a href="my-booking.php">Truy cập của tôi</a></li>
+            <li><a href="post-testimonial.php">Giao bằng</a></li>
+          <li><a href="my-testimonials.php">Bằng của tôi</a></li>
+            <li><a href="logout.php">Đăng xuất</a></li>
             <?php } else { ?>
-            <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">Profile Settings</a></li>
-              <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">Update Password</a></li>
-            <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">My Booking</a></li>
-            <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">Post a Testimonial</a></li>
-          <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">My Testimonial</a></li>
-            <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">Sign Out</a></li>
+            <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">Cài đặt hồ sơ</a></li>
+              <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">Cập nhật password</a></li>
+            <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">Truy cập của tôi</a></li>
+            <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">Giao bằng</a></li>
+          <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">Bằng của tôi</a></li>
+            <li><a href="#loginform"  data-toggle="modal" data-dismiss="modal">Đăng xuất</a></li>
             <?php } ?>
           </ul>
             </li>
@@ -93,12 +93,12 @@ foreach($results as $result)
       </div>
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
-          <li><a href="index.php">Home</a>    </li>
+          <li><a href="index.php">Trang chủ</a>    </li>
 
-          <li><a href="page.php?type=aboutus">About Us</a></li>
-          <li><a href="bike-listing.php">Bike Listing</a>
+          <li><a href="page.php?type=aboutus">Về chúng tôi</a></li>
+          <li><a href="bike-listing.php">Danh sách xe</a>
           <li><a href="page.php?type=faqs">FAQs</a></li>
-          <li><a href="contact-us.php">Contact Us</a></li>
+          <li><a href="contact-us.php">Liên hệ chúng tôi</a></li>
 
         </ul>
       </div>
