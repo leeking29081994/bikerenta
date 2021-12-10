@@ -53,9 +53,9 @@ error_reporting(0);
       <div class="row">
         <div class="col-md-5 col-md-push-7">
           <div class="banner_content">
-            <h1>Find Your Perfect bike</h1>
-            <p>We have more than a thousand bikes for you to choose. </p>
-            <a href="#" class="btn">Read More <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a> </div>
+            <h1>TÌm chiếc xe hoàn hảo cho bạn</h1>
+            <p>Chúng tôi có hơn 1000 chiếc xe cho bạn lựa chọn </p>
+            <a href="#" class="btn">Đọc thêm <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a> </div>
         </div>
       </div>
     </div>
@@ -68,8 +68,8 @@ error_reporting(0);
 <section class="section-padding gray-bg">
   <div class="container">
     <div class="section-header text-center">
-      <h2>Find the Best <span>Bike For You</span></h2>
-      <p>You will be able to fully enjoy your holiday and your ride! Any problems? Our passionate team will be happy to help you!! No waste of time during your holidays to find a rental point on the spot! No language barrier, thanks to our multilingual team! At the same price you would pay on the spot! We have best bikes with best deals</p>
+      <h2>TÌm chiếc xe tốt nhất <span>dành cho bạn</span></h2>
+      <p>Bạn có thể tận hưởng trọn vẹn kỳ nghỉ và chuyến đi của mình! Bạn lo lắng gì ư? Đội ngũ nhân viên nhiệt huyết của chúng tôi sẽ giúp đỡ bạn !! không lãng phí thời gian của bạn, không có rào cản ngôn ngữ, giá cả phải chăng, chúng tôi có những chiếc xe tốt nhất với giá cả ưu đãi nhất</p>
     </div>
     <div class="row">
 
@@ -128,7 +128,7 @@ foreach($results as $result)
         <div class="fun-facts-m">
           <div class="cell">
             <h2><i class="fa fa-calendar" aria-hidden="true"></i>40+</h2>
-            <p>Years In Business</p>
+            <p>Số năm hoạt động</p>
           </div>
         </div>
       </div>
@@ -136,7 +136,7 @@ foreach($results as $result)
         <div class="fun-facts-m">
           <div class="cell">
             <h2><i class="fa fa-motorcycle " aria-hidden="true"></i>1000+</h2>
-            <p>New Bikes For Sale</p>
+            <p>Xe mới ! Sale</p>
           </div>
         </div>
       </div>
@@ -144,7 +144,7 @@ foreach($results as $result)
         <div class="fun-facts-m">
           <div class="cell">
             <h2><i class="fa fa-motorcycle " aria-hidden="true"></i>999+</h2>
-            <p>Used Bikes For Sale</p>
+            <p>Xe cũ ! Sale</p>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@ foreach($results as $result)
         <div class="fun-facts-m">
           <div class="cell">
             <h2><i class="fa fa-user-circle-o" aria-hidden="true"></i>850+</h2>
-            <p>Satisfied Customers</p>
+            <p>Sản phẩm ưa thích</p>
           </div>
         </div>
       </div>
@@ -168,7 +168,7 @@ foreach($results as $result)
 <section class="section-padding testimonial-section parallex-bg">
   <div class="container div_zindex">
     <div class="section-header white-text text-center">
-      <h2>Our Satisfied <span>Customer's Review</span></h2>
+      <h2>Sự đánh gía <span>của khách hàng !!</span></h2>
     </div>
     <div class="row">
       <div id="testimonial-slider">
