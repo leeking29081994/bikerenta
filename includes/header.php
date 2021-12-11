@@ -10,11 +10,11 @@
           <div class="header_info">
             <div class="header_widgets">
               <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
-              <p class="uppercase_text"> Liên hệ Email tới chúng tôi:</p>
+              <p class="uppercase_text"> Liên hệ Email</p>
               <a href="mailto:info@example.com">serbermz2020@gmail.com</a> </div>
             <div class="header_widgets">
               <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
-              <p class="uppercase_text">Số điện thoại hỗ trợ: </p>
+              <p class="uppercase_text">Số điện thoại hỗ trợ</p>
               <a href="tel:+639079373999">+639079373999</a> </div>
             <div class="social-follow">
               <ul>
