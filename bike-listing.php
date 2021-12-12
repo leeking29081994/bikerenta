@@ -81,7 +81,7 @@ error_reporting(0);
           <div class="sorting-count">
 <?php
 //Query for Listing count
-$sql = "SELECT id from tblvehicles";
+$sql = "SELECT id from tblvehicles where tblvehicles.VehiclesBrand=:brand and tblvehicles.FuelType=:fueltype";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':vhid',$vhid, PDO::PARAM_STR);
 $query->execute();
@@ -129,7 +129,6 @@ foreach($results as $result)
               <div class="form-group select">
                 <select class="form-control" name="brand">
                   <option>Chọn mẫu</option>
-
                   <?php $sql = "SELECT * from  tblbrands ";
 $query = $dbh -> prepare($sql);
 $query->execute();
@@ -147,12 +146,11 @@ foreach($results as $result)
               <div class="form-group select">
                 <select class="form-control" name="fueltype">
                   <option>Chọn loại năng lượng</option>
-<option value="Petrol">Petrol</option>
-<option value="Diesel">Diesel</option>
-<option value="CNG">CNG</option>
-                </select>
+                  <option value="Petrol">Petrol</option>
+                  <option value="Diesel">Diesel</option>
+                  <option value="CNG">CNG</option>
+                 </select>
               </div>
-
               <div class="form-group">
                 <button type="submit" class="btn btn-block"><i class="fa fa-search" aria-hidden="true"></i> Tìm xe</button>
               </div>

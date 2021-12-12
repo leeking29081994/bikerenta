@@ -104,6 +104,7 @@ $query -> bindParam(':fueltype',$fueltype, PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 $cnt=1;
+
 if($query->rowCount() > 0)
 {
 foreach($results as $result)
@@ -154,12 +155,11 @@ foreach($results as $result)
 							<div class="form-group select">
 								<select class="form-control" name="fueltype">
 									<option>Select Fuel Type</option>
-		<option value="Petrol">Petrol</option>
-		<option value="Diesel">Diesel</option>
-		<option value="CNG">CNG</option>
+                  <option value="Petrol">Petrol</option>
+                  <option value="Diesel">Diesel</option>
+                  <option value="CNG">CNG</option>
 								</select>
 							</div>
-
 							<div class="form-group">
 								<button type="submit" class="btn btn-block"><i class="fa fa-search" aria-hidden="true"></i> Search Bike</button>
 							</div>
