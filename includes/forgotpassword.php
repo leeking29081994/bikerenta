@@ -44,7 +44,7 @@ return true;
       <div class="modal-header">
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title">Tạo lại password</h3>
+        <h3 class="modal-title">Đặt lại mật khẩu</h3>
       </div>
       <div class="modal-body">
         <div class="row">
@@ -52,23 +52,23 @@ return true;
             <div class="col-md-12">
               <form name="chngpwd" method="post" onSubmit="return valid();">
                 <div class="form-group">
-                  <input type="email" name="email" class="form-control" placeholder="Your Email address*" required="">
+                  <input type="email" name="email" class="form-control" placeholder="Địa chỉ email*" required="">
                 </div>
   <div class="form-group">
-                  <input type="text" name="mobile" class="form-control" placeholder="Your Reg. Mobile*" required="">
+                  <input type="text" name="mobile" class="form-control" placeholder="Số điện thoại*" required="">
                 </div>
   <div class="form-group">
-                  <input type="password" name="newpassword" class="form-control" placeholder="New Password*" required="">
+                  <input type="password" name="newpassword" class="form-control" placeholder="Mật khẩu mới*" required="">
                 </div>
   <div class="form-group">
-                  <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password*" required="">
+                  <input type="password" name="confirmpassword" class="form-control" placeholder="Xác nhận lại mật khẩu*" required="">
                 </div>
                 <div class="form-group">
-                  <input type="submit" value="Reset My Password" name="update" class="btn btn-block">
+                  <input type="submit" value="Đặt lại mật khẩu" name="update" class="btn btn-block">
                 </div>
               </form>
               <div class="text-center">
-                <p class="gray_text">Về lý do bảo mật,chúng rồi sẽ không lưu trữ mật khẩu cảu bạn. Mật khẩu của bạn sẽ được tạo mới và gửi lại cho bạn.</p>
+                <p class="gray_text">Về lý do bảo mật, chúng tôi sẽ không lưu trữ mật khẩu của bạn. Mật khẩu của bạn sẽ được tạo mới và gửi lại cho bạn.</p>
                 <p><a href="#loginform" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Quay lại đăng nhập</a></p>
               </div>
             </div>
