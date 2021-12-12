@@ -67,27 +67,27 @@ return true;
             <div class="col-md-12 col-sm-6">
               <form  method="post" name="signup" onSubmit="return valid();">
                 <div class="form-group">
-                  <input type="text" class="form-control" name="fullname" placeholder="Full Name" required="required">
+                  <input type="text" class="form-control" name="fullname" placeholder="Họ tên" required="required">
                 </div>
                       <div class="form-group">
-                  <input type="text" class="form-control" name="mobileno" placeholder="Mobile Number" maxlength="10" required="required">
+                  <input type="text" class="form-control" name="mobileno" placeholder="Số điện thoại" maxlength="10" required="required">
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control" name="emailid" id="emailid" onBlur="checkAvailability()" placeholder="Email Address" required="required">
+                  <input type="email" class="form-control" name="emailid" id="emailid" onBlur="checkAvailability()" placeholder="Địa chỉ email" required="required">
                    <span id="user-availability-status" style="font-size:12px;"></span> 
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                  <input type="password" class="form-control" name="password" placeholder="Mật khẩu" required="required">
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" name="confirmpassword" placeholder="Confirm Password" required="required">
+                  <input type="password" class="form-control" name="confirmpassword" placeholder="Xác nhận mật khẩu" required="required">
                 </div>
                 <div class="form-group checkbox">
                   <input type="checkbox" id="terms_agree" required="required" checked="">
                   <label for="terms_agree">Tôi đồng ý <a href="#">Giải thích về điều kiện</a></label>
                 </div>
                 <div class="form-group">
-                  <input type="submit" value="Sign Up" name="signup" id="submit" class="btn btn-block">
+                  <input type="submit" value="Đăng ký" name="signup" id="submit" class="btn btn-block">
                 </div>
               </form>
             </div>
