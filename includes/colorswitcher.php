@@ -6,7 +6,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="predefined_styles">
                         <div class="skin-theme-switcher">
-                            <h4>Color</h4>
+                            <h4>Màu</h4>
                             <a href="#" data-switchcolor="red" class="styleswitch" style="background-color:#de302f;"> </a>
                             <a href="#" data-switchcolor="orange" class="styleswitch" style="background-color:#f76d2b;"> </a>
                             <a href="#" data-switchcolor="blue" class="styleswitch" style="background-color:#228dcb;"> </a>

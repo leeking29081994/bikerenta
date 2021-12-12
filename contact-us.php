@@ -51,13 +51,13 @@ $error="Something went wrong. Please try again";
 <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
 <!-- SWITCHER -->
-		<link rel="stylesheet" id="switcher-css" type="text/css" href="assets/switcher/css/switcher.css" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/red.css" title="red" media="all" data-default-color="true" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/orange.css" title="orange" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/blue.css" title="blue" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/pink.css" title="pink" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/green.css" title="green" media="all" />
-		<link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/purple.css" title="purple" media="all" />
+    <link rel="stylesheet" id="switcher-css" type="text/css" href="assets/switcher/css/switcher.css" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/red.css" title="red" media="all" data-default-color="true" />
+    <link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/orange.css" title="orange" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/blue.css" title="blue" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/pink.css" title="pink" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/green.css" title="green" media="all" />
+    <link rel="alternate stylesheet" type="text/css" href="assets/switcher/css/purple.css" title="purple" media="all" />
 
 <!-- Fav and touch icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon-icon/apple-touch-icon-144-precomposed.png">
@@ -87,7 +87,7 @@ $error="Something went wrong. Please try again";
 </head>
 <body>
 
-<<!-- Start Switcher -->
+<!-- Start Switcher -->
 <?php include('includes/colorswitcher.php');?>
 <!-- /Switcher -->
 
@@ -100,11 +100,11 @@ $error="Something went wrong. Please try again";
   <div class="container">
     <div class="page-header_wrap">
       <div class="page-heading">
-        <h1>Contact Us</h1>
+        <h1>Liên hệ chúng tôi</h1>
       </div>
       <ul class="coustom-breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li>Contact Us</li>
+        <li><a href="#">Trang chủ</a></li>
+        <li>Liên hệ chúng tôi</li>
       </ul>
     </div>
   </div>
@@ -118,35 +118,35 @@ $error="Something went wrong. Please try again";
   <div class="container">
     <div  class="row">
       <div class="col-md-6">
-        <h3>Get in touch using the form below</h3>
+        <h3>Sử dụng biểu mẫu dưới đây</h3>
           <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php }
         else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
         <div class="contact_form gray-bg">
           <form  method="post">
             <div class="form-group">
-              <label class="control-label">Full Name <span>*</span></label>
+              <label class="control-label">Họ tên <span>*</span></label>
               <input type="text" name="fullname" class="form-control white_bg" id="fullname" required>
             </div>
             <div class="form-group">
-              <label class="control-label">Email Address <span>*</span></label>
+              <label class="control-label">Địa chỉ email <span>*</span></label>
               <input type="email" name="email" class="form-control white_bg" id="emailaddress" required>
             </div>
             <div class="form-group">
-              <label class="control-label">Phone Number <span>*</span></label>
+              <label class="control-label">Số điện thoại <span>*</span></label>
               <input type="text" name="contactno" class="form-control white_bg" id="phonenumber" required>
             </div>
             <div class="form-group">
-              <label class="control-label">Message <span>*</span></label>
+              <label class="control-label">Lời nhắn <span>*</span></label>
               <textarea class="form-control white_bg" name="message" rows="4" required></textarea>
             </div>
             <div class="form-group">
-              <button class="btn" type="submit" name="send" type="submit">Send Message <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+              <button class="btn" type="submit" name="send" type="submit">Gửi lời nhắn <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
             </div>
           </form>
         </div>
       </div>
       <div class="col-md-6">
-        <h3>Contact Info</h3>
+        <h3>Thông tin liên hệ</h3>
         <div class="contact_detail">
               <?php
 $pagetype=$_GET['type'];
