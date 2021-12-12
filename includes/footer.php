@@ -36,28 +36,28 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
       <div class="row">
 
         <div class="col-md-6">
-          <h6>About Us</h6>
+          <h6>Về chúng tôi</h6>
           <ul>
 
 
-          <li><a href="page.php?type=aboutus">About Us</a></li>
-            <li><a href="page.php?type=faqs">FAQs</a></li>
-            <li><a href="page.php?type=privacy">Privacy</a></li>
-          <li><a href="page.php?type=terms">Terms of use</a></li>
-               <li><a href="admin/">Admin Login</a></li>
+          <li><a href="page.php?type=aboutus">Về chúng tôi</a></li>
+            <li><a href="page.php?type=faqs">Câu hỏi thường gặp</a></li>
+            <li><a href="page.php?type=privacy">Quyền riêng tư</a></li>
+          <li><a href="page.php?type=terms">Điều khoản sử dụng</a></li>
+               <li><a href="admin/">Quản trị viên đăng nhập</a></li>
           </ul>
         </div>
 
         <div class="col-md-3 col-sm-6">
-          <h6>Subscribe Newsletter</h6>
+          <h6>Theo dõi thông tin mới</h6>
           <div class="newsletter-form">
             <form method="post">
               <div class="form-group">
-                <input type="email" name="subscriberemail" class="form-control newsletter-input" required placeholder="Enter Email Address" />
+                <input type="email" name="subscriberemail" class="form-control newsletter-input" required placeholder="Nhập địa chỉ email" />
               </div>
-              <button type="submit" name="emailsubscibe" class="btn btn-block">Subscribe <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+              <button type="submit" name="emailsubscibe" class="btn btn-block">Theo dõi <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
             </form>
-            <p class="subscribed-text">*We send great deals and latest auto news to our subscribed users very week.</p>
+            <p class="subscribed-text">*Chúng tôi sẽ gửi đến những ai theo dõi những thông tin mới nhất và những đơn hàng tuyệt vời</p>
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
       <div class="row">
         <div class="col-md-6 col-md-push-6 text-right">
           <div class="footer_widget">
-            <p>Connect with Us:</p>
+            <p>Kết nối với chúng tôi:</p>
             <ul>
               <li><a href="/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
               <li><a href="/"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
@@ -79,7 +79,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
           </div>
         </div>
         <div class="col-md-6 col-md-pull-6">
-          <p class="copy-right">Copyright &copy; 2020 Bike Rental Portal.<a href="/"></a></p>
+          <p class="copy-right">Bản quyền &copy; 2020 Bike Rental Portal.<a href="/"></a></p>
         </div>
       </div>
     </div>
