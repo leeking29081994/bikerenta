@@ -53,7 +53,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
           <div class="newsletter-form">
             <form method="post">
               <div class="form-group">
-                <input type="email" name="subscriberemail" class="form-control newsletter-input" required placeholder="Enter Email Address" />
+                <input type="email" name="subscriberemail" class="form-control newsletter-input" required placeholder="Nhập địa chỉ email của bạn..." />
               </div>
               <button type="submit" name="emailsubscibe" class="btn btn-block">Theo dõi<span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
             </form> 

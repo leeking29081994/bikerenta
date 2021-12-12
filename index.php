@@ -13,7 +13,7 @@ error_reporting(0);
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>Bike Rental Portal</title>
+<title>Thuê xe giá tốt</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
@@ -53,7 +53,7 @@ error_reporting(0);
       <div class="row">
         <div class="col-md-5 col-md-push-7">
           <div class="banner_content">
-            <h1>TÌm chiếc xe hoàn hảo cho bạn</h1>
+            <h1>Tìm chiếc xe hoàn hảo cho bạn</h1>
             <p>Chúng tôi có hơn 1000 chiếc xe cho bạn lựa chọn </p>
             <a href="#" class="btn">Đọc thêm <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a> </div>
         </div>
@@ -68,7 +68,7 @@ error_reporting(0);
 <section class="section-padding gray-bg">
   <div class="container">
     <div class="section-header text-center">
-      <h2>TÌm chiếc xe tốt nhất <span>dành cho bạn</span></h2>
+      <h2>Tìm chiếc xe phù hợp nhất với bạn</h2>
       <p>Bạn có thể tận hưởng trọn vẹn kỳ nghỉ và chuyến đi của mình! Bạn lo lắng gì ư? Đội ngũ nhân viên nhiệt huyết của chúng tôi sẽ giúp đỡ bạn !! không lãng phí thời gian của bạn, không có rào cản ngôn ngữ, giá cả phải chăng, chúng tôi có những chiếc xe tốt nhất với giá cả ưu đãi nhất</p>
     </div>
     <div class="row">
@@ -76,7 +76,7 @@ error_reporting(0);
       <!-- Nav tabs -->
       <div class="recent-tab">
         <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab">New Bike</a></li>
+          <li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab">Mẫu xe mới</a></li>
         </ul>
       </div>
       <!-- Recently Listed New Cars -->
@@ -99,8 +99,8 @@ foreach($results as $result)
 <div class="car-info-box"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>"><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1);?>" class="img-responsive" alt="image"></a>
 <ul>
 <li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result->FuelType);?></li>
-<li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear);?> Model</li>
-<li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> seats</li>
+<li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear);?> Mẫu</li>
+<li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> Người ngồi</li>
 </ul>
 </div>
 <div class="car-title-m">
@@ -168,7 +168,7 @@ foreach($results as $result)
 <section class="section-padding testimonial-section parallex-bg">
   <div class="container div_zindex">
     <div class="section-header white-text text-center">
-      <h2>Sự đánh gía <span>của khách hàng !!</span></h2>
+      <h2>Đánh giá của khách hàng !!</h2>
     </div>
     <div class="row">
       <div id="testimonial-slider">

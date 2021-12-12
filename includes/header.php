@@ -32,7 +32,7 @@
 <?php }
 else{
 
-echo "Welcome To Bike rental portal";
+echo "Chào mừng bạn đến với Thuê Xe Giá Tốt";
  } ?>
           </div>
         </div>
@@ -86,7 +86,7 @@ foreach($results as $result)
         <div class="header_search">
           <div id="search_toggle"><i class="fa fa-search" aria-hidden="true"></i></div>
           <form action="#" method="get" id="header-search-form">
-            <input type="text" placeholder="Search..." class="form-control">
+            <input type="text" placeholder="Tìm kiếm..." class="form-control">
             <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
           </form>
         </div>
