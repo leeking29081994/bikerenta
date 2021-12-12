@@ -124,7 +124,7 @@ $_SESSION['brndid']=$result->bid;
       </div>
       <div class="col-md-3">
         <div class="price_info">
-          <p>$<?php echo htmlentities($result->PricePerDay);?> </p>Per Day
+          <p>$<?php echo htmlentities($result->PricePerDay);?> </p>/1 ngày
 
         </div>
       </div>
@@ -136,16 +136,16 @@ $_SESSION['brndid']=$result->bid;
 
             <li> <i class="fa fa-calendar" aria-hidden="true"></i>
               <h5><?php echo htmlentities($result->ModelYear);?></h5>
-              <p>Reg.Year</p>
+              <p>Năm đăng ký</p>
             </li>
             <li> <i class="fa fa-cogs" aria-hidden="true"></i>
               <h5><?php echo htmlentities($result->FuelType);?></h5>
-              <p>Fuel Type</p>
+              <p>Loại nhiên liệu</p>
             </li>
 
             <li> <i class="fa fa-user-plus" aria-hidden="true"></i>
               <h5><?php echo htmlentities($result->SeatingCapacity);?></h5>
-              <p>Seats</p>
+              <p>Chỗ ngồi</p>
             </li>
           </ul>
         </div>
@@ -153,9 +153,9 @@ $_SESSION['brndid']=$result->bid;
           <div class="listing_detail_wrap">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs gray-bg" role="tablist">
-              <li role="presentation" class="active"><a href="#vehicle-overview " aria-controls="vehicle-overview" role="tab" data-toggle="tab">Vehicle Overview </a></li>
+              <li role="presentation" class="active"><a href="#vehicle-overview " aria-controls="vehicle-overview" role="tab" data-toggle="tab">Tổng quan về xe </a></li>
 
-              <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">Accessories</a></li>
+              <li role="presentation"><a href="#accessories" aria-controls="accessories" role="tab" data-toggle="tab">Phụ tùng</a></li>
             </ul>
 
             <!-- Tab panes -->
@@ -173,14 +173,14 @@ $_SESSION['brndid']=$result->bid;
                 <table>
                   <thead>
                     <tr>
-                      <th colspan="2">Accessories</th>
+                      <th colspan="2">Phụ tùng</th>
                     </tr>
                   </thead>
                   <tbody>
 
 
 <tr>
-<td>AntiLock Braking System (ABS)</td>
+<td>Hệ thống chống bó cứng phanh (ABS)</td>
 <?php if($result->AntiLockBrakingSystem==1)
 {
 ?>
@@ -191,7 +191,7 @@ $_SESSION['brndid']=$result->bid;
                     </tr>
 
 <tr>
-<td>Smooth Handling</td>
+<td>Xử lý mượt mà</td>
 <?php if($result->PowerSteering==1)
 {
 ?>
@@ -206,7 +206,7 @@ $_SESSION['brndid']=$result->bid;
 
 
 <tr>
-<td>Leather Seats</td>
+<td>Ghế da</td>
 <?php if($result->LeatherSeats==1)
 {
 ?>
@@ -217,7 +217,7 @@ $_SESSION['brndid']=$result->bid;
 </tr>
 
 <tr>
-<td>Central Locking</td>
+<td>Khóa trung tâm</td>
 <?php if($result->CentralLocking==1)
 {
 ?>
@@ -227,7 +227,7 @@ $_SESSION['brndid']=$result->bid;
 <?php } ?>
 </tr>
 
-<td>Brake Assist</td>
+<td>Hỗ trợ phanh</td>
 <?php if($result->BrakeAssist==1)
 {
 ?>
@@ -239,7 +239,7 @@ $_SESSION['brndid']=$result->bid;
 
 
 <tr>
-<td>Crash Sensor</td>
+<td>Cảm biến sự cố</td>
 <?php if($result->CrashSensor==1)
 {
 ?>
@@ -264,29 +264,29 @@ $_SESSION['brndid']=$result->bid;
       <aside class="col-md-3">
 
         <div class="share_vehicle">
-          <p>Share: <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a> </p>
+          <p>Chia sẻ: <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a> </p>
         </div>
         <div class="sidebar_widget">
           <div class="widget_heading">
-            <h5><i class="fa fa-envelope" aria-hidden="true"></i>Book Now</h5>
+            <h5><i class="fa fa-envelope" aria-hidden="true"></i>Đặt ngay</h5>
           </div>
           <form method="post">
             <div class="form-group">
-              <input type="text" class="form-control" name="fromdate" placeholder="From Date(dd/mm/yyyy)" required>
+              <input type="text" class="form-control" name="fromdate" placeholder="Từ ngày (ngày/tháng/năm)" required>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" name="todate" placeholder="To Date(dd/mm/yyyy)" required>
+              <input type="text" class="form-control" name="todate" placeholder="Đến ngày (ngày/tháng/năm)" required>
             </div>
             <div class="form-group">
-              <textarea rows="4" class="form-control" name="message" placeholder="Message" required></textarea>
+              <textarea rows="4" class="form-control" name="message" placeholder="Tin nhắn" required></textarea>
             </div>
           <?php if($_SESSION['login'])
               {?>
               <div class="form-group">
-                <input type="submit" class="btn"  name="submit" value="Book Now">
+                <input type="submit" class="btn"  name="submit" value="Đặt ngay">
               </div>
               <?php } else { ?>
-<a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login For Book</a>
+<a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Đăng nhập để đặt xe</a>
 
               <?php } ?>
           </form>
@@ -300,7 +300,7 @@ $_SESSION['brndid']=$result->bid;
 
     <!--Similar-Cars-->
     <div class="similar_cars">
-      <h3>Similar Bikes</h3>
+      <h3>Xe tương tự</h3>
       <div class="row">
 <?php
 $bid=$_SESSION['brndid'];
@@ -324,8 +324,8 @@ foreach($results as $result)
 
               <ul class="features_list">
 
-             <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> seats</li>
-                <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear);?> model</li>
+             <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> ghế</li>
+                <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear);?> số hiệu</li>
                 <li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result->FuelType);?></li>
               </ul>
             </div>
