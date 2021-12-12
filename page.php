@@ -70,7 +70,7 @@ foreach($results as $result)
         <h1><?php   echo htmlentities($result->PageName); ?></h1>
       </div>
       <ul class="coustom-breadcrumb">
-        <li><a href="#">Home</a></li>
+        <li><a href="#">Trang chủ</a></li>
         <li><?php   echo htmlentities($result->PageName); ?></li>
       </ul>
     </div>
