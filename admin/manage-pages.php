@@ -119,7 +119,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 				<div class="row">
 					<div class="col-md-12">
 
-						<h2 class="page-title">Manage Pages </h2>
+						<h2 class="page-title">QUAN LI TRANG </h2>
 
 						<div class="row">
 							<div class="col-md-10">
