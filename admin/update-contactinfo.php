@@ -84,12 +84,12 @@ $msg="Info Updateed successfully";
 				<div class="row">
 					<div class="col-md-12">
 
-						<h2 class="page-title">Update Contact Info</h2>
+						<h2 class="page-title">Cập nhật thông tin liên hệ</h2>
 
 						<div class="row">
 							<div class="col-md-10">
 								<div class="panel panel-default">
-									<div class="panel-heading">Form fields</div>
+									<div class="panel-heading">Biểu mẫu</div>
 									<div class="panel-body">
 										<form method="post" name="chngpwd" class="form-horizontal" onSubmit="return valid();">
 
@@ -107,19 +107,19 @@ foreach($results as $result)
 {				?>
 
 				<div class="form-group">
-												<label class="col-sm-4 control-label"> Address</label>
+												<label class="col-sm-4 control-label"> Địa chỉ</label>
 												<div class="col-sm-8">
 													<textarea class="form-control" name="address" id="address" required><?php echo htmlentities($result->Address);?></textarea>
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-4 control-label"> Email id</label>
+												<label class="col-sm-4 control-label">Địa chỉ email</label>
 												<div class="col-sm-8">
 													<input type="email" class="form-control" name="email" id="email" value="<?php echo htmlentities($result->EmailId);?>" required>
 												</div>
 											</div>
 <div class="form-group">
-												<label class="col-sm-4 control-label"> Contact Number </label>
+												<label class="col-sm-4 control-label"> Số điện thoại liên hệ </label>
 												<div class="col-sm-8">
 													<input type="text" class="form-control" value="<?php echo htmlentities($result->ContactNo);?>" name="contactno" id="contactno" required>
 												</div>
@@ -133,7 +133,7 @@ foreach($results as $result)
 											<div class="form-group">
 												<div class="col-sm-8 col-sm-offset-4">
 
-													<button class="btn btn-primary" name="submit" type="submit">Update</button>
+													<button class="btn btn-primary" name="submit" type="submit">Cập nhật</button>
 												</div>
 											</div>
 
