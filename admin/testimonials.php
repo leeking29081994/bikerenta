@@ -49,7 +49,7 @@ $msg="Testimonial Successfully Active";
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 
-	<title>Bike Rental Portal |Admin Manage testimonials   </title>
+	<title>Thuê xe giá tốt |Quản trị viên   </title>
 
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -99,33 +99,33 @@ $msg="Testimonial Successfully Active";
 				<div class="row">
 					<div class="col-md-12">
 
-						<h2 class="page-title">Manage Testimonials</h2>
+						<h2 class="page-title">Quản lý xác nhận</h2>
 
 						<!-- Zero Configuration Table -->
 						<div class="panel panel-default">
-							<div class="panel-heading">User Testimonials</div>
+							<div class="panel-heading">Xác nhận tài khoản</div>
 							<div class="panel-body">
-							<?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php }
-				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
+							<?php if($error){?><div class="errorWrap"><strong>Lỗi</strong>:<?php echo htmlentities($error); ?> </div><?php }
+				else if($msg){?><div class="succWrap"><strong>Thành công</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
 								<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
 									<thead>
 										<tr>
 										<th>#</th>
-											<th>Name</th>
+											<th>Tên</th>
 											<th>Email</th>
-											<th>Testimonials</th>
-											<th>Posting date</th>
-											<th>Action</th>
+											<th>Xác nhận</th>
+											<th>Ngày đăng</th>
+											<th>Hoạt động</th>
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
 										<th>#</th>
-											<th>Name</th>
+											<th>Tên</th>
 											<th>Email</th>
-											<th>Testimonials</th>
-											<th>Posting date</th>
-											<th>Action</th>
+											<th>Xác nhận</th>
+											<th>Ngày đăng</th>
+											<th>Hoạt động</th>
 										</tr>
 									</tfoot>
 									<tbody>
@@ -147,10 +147,10 @@ foreach($results as $result)
 											<td><?php echo htmlentities($result->PostingDate);?></td>
 										<td><?php if($result->status=="" || $result->status==0)
 {
-	?><a href="testimonials.php?aeid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Do you really want to Active')"> Inactive</a>
+	?><a href="testimonials.php?aeid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Do you really want to Active')"> Không hoạt động</a>
 <?php } else {?>
 
-<a href="testimonials.php?eid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Do you really want to Inactive')"> Active</a>
+<a href="testimonials.php?eid=<?php echo htmlentities($result->id);?>" onclick="return confirm('Do you really want to Inactive')"> Hoạt động</a>
 </td>
 <?php } ?></td>
 										</tr>
