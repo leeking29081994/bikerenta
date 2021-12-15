@@ -83,11 +83,11 @@ $msg="Page data updated  successfully";
 				<div class="row">
 					<div class="col-md-12">
 
-						<h2 class="page-title">Manage Brands</h2>
+						<h2 class="page-title">Quản lý nhãn hiệu</h2>
 
 						<!-- Zero Configuration Table -->
 						<div class="panel panel-default">
-							<div class="panel-heading">Listed  Brands</div>
+							<div class="panel-heading">Danh sách nhãn hiệu</div>
 							<div class="panel-body">
 							<?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php }
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
@@ -95,21 +95,21 @@ $msg="Page data updated  successfully";
 									<thead>
 										<tr>
 										<th>#</th>
-												<th>Brand Name</th>
-											<th>Creation Date</th>
-											<th>Updation date</th>
+												<th>Tên nhãn hiệu</th>
+											<th>Ngày tạo</th>
+											<th>Ngày cập nhật</th>
 
-											<th>Action</th>
+											<th>Thực hiện</th>
 										</tr>
 									</thead>
 									<tfoot>
 										<tr>
 										<th>#</th>
-											<th>Brand Name</th>
-											<th>Creation Date</th>
-											<th>Updation date</th>
+											<th>Tên nhãn hiệu</th>
+											<th>Ngày tạo</th>
+											<th>Ngày cập nhật</th>
 
-											<th>Action</th>
+											<th>Thực hiện</th>
 										</tr>
 										</tr>
 									</tfoot>
@@ -161,6 +161,24 @@ foreach($results as $result)
 	<script src="js/fileinput.js"></script>
 	<script src="js/chartData.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+  $('#zctb').dataTable({
+       "oLanguage": {
+               "sInfo" : "Số bản ghi từ 1 đến 6",// text you want show for info section
+               "sSearch": "Tìm kiếm",
+               "sSortable" : "Hiển thị",
+               "infoEmpty": "Không có bản ghi nào",
+               "oPaginate": {
+                      "sFirst": "First",
+                      "sLast": "Last",
+                      "sNext": "Tiếp theo",
+                      "sPrevious": "Quay lại"
+    },
+               "sLengthMenu": "Hiển thị _MENU_ bản ghi",
+            },
+   });
+  </script>
+
 </body>
 </html>
 <?php } ?>

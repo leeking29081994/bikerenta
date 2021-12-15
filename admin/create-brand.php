@@ -89,12 +89,12 @@ $error="Something went wrong. Please try again";
 				<div class="row">
 					<div class="col-md-12">
 
-						<h2 class="page-title">Create Brand</h2>
+						<h2 class="page-title">Tạo nhãn hiệu</h2>
 
 						<div class="row">
 							<div class="col-md-10">
 								<div class="panel panel-default">
-									<div class="panel-heading">Form fields</div>
+									<div class="panel-heading">Biểu mẫu</div>
 									<div class="panel-body">
 										<form method="post" name="chngpwd" class="form-horizontal" onSubmit="return valid();">
 
@@ -102,7 +102,7 @@ $error="Something went wrong. Please try again";
   	        	  <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php }
 				else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
 											<div class="form-group">
-												<label class="col-sm-4 control-label">Brand Name</label>
+												<label class="col-sm-4 control-label">Tên nhãn hiệu</label>
 												<div class="col-sm-8">
 													<input type="text" class="form-control" name="brand" id="brand" required>
 												</div>
@@ -115,7 +115,7 @@ $error="Something went wrong. Please try again";
 											<div class="form-group">
 												<div class="col-sm-8 col-sm-offset-4">
 
-													<button class="btn btn-primary" name="submit" type="submit">Submit</button>
+													<button class="btn btn-primary" name="submit" type="submit">Đưa lên</button>
 												</div>
 											</div>
 
