@@ -13,7 +13,7 @@ error_reporting(0);
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <title>Trang chủ thuê xe| Danh sách xe</title>
+  <title>Bike Rental Portal | Bike Listing</title>
   <!--Bootstrap -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
   <!--Custome Style -->
@@ -61,11 +61,11 @@ error_reporting(0);
     <div class="container">
       <div class="page-header_wrap">
         <div class="page-heading">
-          <h1>Danh sách xe</h1>
+          <h1>Car Listing</h1>
         </div>
         <ul class="coustom-breadcrumb">
-          <li><a href="#">Trang chủ</a></li>
-          <li>Danh sách xe</li>
+          <li><a href="#">Home</a></li>
+          <li>Car Listing</li>
         </ul>
       </div>
     </div>
@@ -83,53 +83,65 @@ error_reporting(0);
             <div class="sorting-count">
               <?php
               //Query for Listing count
-              $sql = "SELECT id from tblvehicles where tblvehicles.VehiclesBrand=:brand and tblvehicles.FuelType=:fueltype";
-              $query = $dbh->prepare($sql);
-              $query->bindParam(':vhid', $vhid, PDO::PARAM_STR);
-              $query->execute();
-              $results = $query->fetchAll(PDO::FETCH_OBJ);
-              $cnt = $query->rowCount();
+              $brand = $_POST['brand'];
+              $fueltype = $_POST['fueltype'];
+              $conn = mysqli_connect('localhost', 'root');
+              mysqli_select_db($conn,'bikerental');
+              mysqli_query($conn, 'SET NAMES UTF8');
+              $sql1 = "SELECT tblvehicles.*,tblbrands.BrandName,tblbrands.id as bid  from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand";
+              if(!empty($_POST['brand'])&&!empty($_POST['fueltype'])){
+              $where .= " where tblvehicles.VehiclesBrand=$brand and tblvehicles.FuelType LIKE '%".$fueltype."%'";
+              }elseif(!empty($_POST['brand'])&&empty($_POST['fueltype'])){
+                $where .= " where tblvehicles.VehiclesBrand=".$brand;
+              }elseif(!empty($_POST['fueltype'])&&empty($_POST['brand'])){
+                $where .= " where tblvehicles.FuelType LIKE '%".$fueltype."%'";
+              }else{
+                $where .= "";
+              }
+              $sql1 .= $where; 
+              $cnt = 1;
+              $query1 = mysqli_query($conn, $sql1);
+              $data = mysqli_fetch_all($query1, MYSQLI_ASSOC);
               ?>
               <p><span><?php echo htmlentities($cnt); ?> Danh sách</span></p>
             </div>
           </div>
 
-          <?php $sql = "SELECT tblvehicles.*,tblbrands.BrandName,tblbrands.id as bid  from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand";
-          $query = $dbh->prepare($sql);
-          $query->execute();
-          $results = $query->fetchAll(PDO::FETCH_OBJ);
-          $cnt = 1;
-          if ($query->rowCount() > 0) {
-            foreach ($results as $result) {  ?>
-              <div class="product-listing-m gray-bg">
-                <div class="product-listing-img"><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1); ?>" class="img-responsive" alt="Image" /> </a>
+          <?php
+          //if ($query->rowCount() > 0) {
+            foreach($data as $key => $result){ ?>
+
+         <div class="product-listing-m gray-bg">
+                <div class="product-listing-img"><img src="admin/img/vehicleimages/<?php echo "{$result['Vimage1']}"; ?>" class="img-responsive" alt="Image" /> </a>
                 </div>
                 <div class="product-listing-content">
-                  <h5><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->BrandName); ?> , <?php echo htmlentities($result->VehiclesTitle); ?></a></h5>
-                  <p class="list-price">$<?php echo htmlentities($result->PricePerDay); ?>/Ngày</p>
+                  <h5><a href="vehical-details.php?vhid=<?php echo "{$result['id']}"; ?>"><?php echo "{$result['BrandName']}"; ?> , <?php echo "{$result['VehiclesTitle']}"; ?></a></h5>
+                  <p class="list-price">$<?php echo "{$result['PricePerDay']}"; ?>/Ngày</p>
                   <ul>
-                    <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity); ?>Ghế</li>
-                    <li><i class="fa fa-calendar" aria-hidden="true"></i>Mẫu<?php echo htmlentities($result->ModelYear); ?></li>
-                    <li><i class="fa fa-motorcycle" aria-hidden="true"></i><?php echo htmlentities($result->FuelType); ?></li>
+                    <li><i class="fa fa-user" aria-hidden="true"></i><?php echo "{$result['SeatingCapacity']}"; ?>Ghế</li>
+                    <li><i class="fa fa-calendar" aria-hidden="true"></i>Mẫu<?php echo "{$result['ModelYear']}"; ?></li>
+                    <li><i class="fa fa-motorcycle" aria-hidden="true"></i><?php echo "{$result['FuelType']}"; ?></li>
                   </ul>
-                  <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>" class="btn">Xem chi tiết<span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                  <a href="vehical-details.php?vhid=<?php echo "{$result['id']}"; ?>" class="btn">Xem chi tiết<span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
                 </div>
               </div>
           <?php }
-          } ?>
+          //} 
+          ?>
         </div>
 
         <!--Side-Bar-->
         <aside class="col-md-3 col-md-pull-9">
           <div class="sidebar_widget">
             <div class="widget_heading">
-              <h5><i class="fa fa-filter" aria-hidden="true"></i> Tìm xe của bạn</h5>
+              <h5><i class="fa fa-filter" aria-hidden="true"></i> Tìm xe của bạn </h5>
             </div>
             <div class="sidebar_filter">
-              <form action="search-carresult.php" method="post">
+              <form action="bike-listing.php" method="post">
                 <div class="form-group select">
                   <select class="form-control" name="brand">
-                    <option>Chọn mẫu</option>
+                    <option value="">Chọn mẫu</option>
+
                     <?php $sql = "SELECT * from  tblbrands ";
                     $query = $dbh->prepare($sql);
                     $query->execute();
@@ -145,7 +157,7 @@ error_reporting(0);
                 </div>
                 <div class="form-group select">
                   <select class="form-control" name="fueltype">
-                    <option>Chọn loại nhiên liệu</option>
+                    <option value="">Chọn loại nhiên liệu</option>
                     <option value="Petrol">Petrol</option>
                     <option value="Diesel">Diesel</option>
                     <option value="CNG">CNG</option>
@@ -160,7 +172,7 @@ error_reporting(0);
 
           <div class="sidebar_widget">
             <div class="widget_heading">
-              <h5><i class="fa fa-motorcycle" aria-hidden="true"></i>Mẫu xe yêu thích</h5>
+              <h5><i class="fa fa-car" aria-hidden="true"></i> Mẫu xe yêu thích</h5>
             </div>
             <div class="recent_addedcars">
               <ul>
@@ -175,7 +187,7 @@ error_reporting(0);
                     <li class="gray-bg">
                       <div class="recent_post_img"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1); ?>" alt="image"></a> </div>
                       <div class="recent_post_title"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->BrandName); ?> , <?php echo htmlentities($result->VehiclesTitle); ?></a>
-                        <p class="widget_price">$<?php echo htmlentities($result->PricePerDay); ?>/ngày</p>
+                        <p class="widget_price">$<?php echo htmlentities($result->PricePerDay); ?>/Ngày</p>
                       </div>
                     </li>
                 <?php }
