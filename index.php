@@ -2,7 +2,7 @@
 session_start();
 include('includes/config.php');
 error_reporting(0);
-
+$search = !empty($_POST['search'])?$_POST['search']:'';
 ?>
 
 <!DOCTYPE HTML>
@@ -83,36 +83,43 @@ error_reporting(0);
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="resentnewcar">
 
-<?php $sql = "SELECT tblvehicles.VehiclesTitle,tblbrands.BrandName,tblvehicles.PricePerDay,tblvehicles.FuelType,tblvehicles.ModelYear,tblvehicles.id,tblvehicles.SeatingCapacity,tblvehicles.VehiclesOverview,tblvehicles.Vimage1 from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand";
-$query = $dbh -> prepare($sql);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $result)
+<?php 
+$conn = mysqli_connect('localhost', 'root');
+        mysqli_select_db($conn,'bikerental');
+        mysqli_query($conn, 'SET NAMES UTF8');
+if(!empty($search)){
+$sql = "SELECT tblvehicles.VehiclesTitle,tblbrands.BrandName,tblvehicles.PricePerDay,tblvehicles.FuelType,tblvehicles.ModelYear,tblvehicles.id,tblvehicles.SeatingCapacity,tblvehicles.VehiclesOverview,tblvehicles.Vimage1 from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand where tblvehicles.VehiclesTitle OR tblbrands.BrandName  LIKE '%".$search."%'";
+}else{
+  $sql = "SELECT tblvehicles.VehiclesTitle,tblbrands.BrandName,tblvehicles.PricePerDay,tblvehicles.FuelType,tblvehicles.ModelYear,tblvehicles.id,tblvehicles.SeatingCapacity,tblvehicles.VehiclesOverview,tblvehicles.Vimage1 from tblvehicles join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand";
+}
+$query = mysqli_query($conn, $sql);
+$data = mysqli_fetch_all($query, MYSQLI_ASSOC);
+//if($query->rowCount() > 0)
+//{
+foreach($data as $result)
 {
 ?>
 
 <div class="col-list-3">
 <div class="recent-car-list">
-<div class="car-info-box"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>"><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1);?>" class="img-responsive" alt="image" style="height: 220px;"></a>
+<div class="car-info-box"> <a href="vehical-details.php?vhid=<?php echo "{$result['id']}";?>"><img src="admin/img/vehicleimages/<?php echo "{$result['Vimage1']}";?>" class="img-responsive" alt="image" style="height: 220px;"></a>
 <ul>
-<li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result->FuelType);?></li>
-<li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear);?> Mẫu</li>
-<li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity);?> Người ngồi</li>
+<li><i class="fa fa-car" aria-hidden="true"></i><?php echo "{$result['FuelType']}";?></li>
+<li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo "{$result['ModelYear']}";?> Mẫu</li>
+<li><i class="fa fa-user" aria-hidden="true"></i><?php echo "{$result['SeatingCapacity']}";?> Người ngồi</li>
 </ul>
 </div>
 <div class="car-title-m">
-<h6><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id);?>"><?php echo htmlentities($result->BrandName);?> , <?php echo htmlentities($result->VehiclesTitle);?></a></h6>
-<span class="price">$<?php echo htmlentities($result->PricePerDay);?> /Day</span>
+<h6><a href="vehical-details.php?vhid=<?php echo "{$result['id']}";?>"><?php echo "{$result['BrandName']}";?> , <?php echo "{$result['VehiclesTitle']}";?></a></h6>
+<span class="price">$<?php echo "{$result['PricePerDay']}";?> /Day</span>
 </div>
 <div class="inventory_info_m">
-<p><?php echo substr($result->VehiclesOverview,0,70);?></p>
+<p><?php echo substr($result['VehiclesOverview'], 0, 70);?></p>
 </div>
 </div>
 </div>
-<?php }}?>
+<?php }
+//}?>
 
       </div>
     </div>
