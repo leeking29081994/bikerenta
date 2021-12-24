@@ -26,7 +26,7 @@
               </ul>
             </div>
    <?php   if(strlen($_SESSION['login'])==0)
-	{
+  {
 ?>
  <div class="login_btn"> <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Đăng nhập/Đăng ký</a> </div>
 <?php }
@@ -60,9 +60,9 @@ $results=$query->fetchAll(PDO::FETCH_OBJ);
 if($query->rowCount() > 0)
 {
 foreach($results as $result)
-	{
+  {
 
-	 echo htmlentities($result->FullName); }}?><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+   echo htmlentities($result->FullName); }}?><i class="fa fa-angle-down" aria-hidden="true"></i></a>
               <ul class="dropdown-menu">
            <?php if($_SESSION['login']){?>
             <li><a href="profile.php">Cài đặt hồ sơ</a></li>
@@ -85,8 +85,8 @@ foreach($results as $result)
         </div>
         <div class="header_search">
           <div id="search_toggle"><i class="fa fa-search" aria-hidden="true"></i></div>
-          <form action="#" method="get" id="header-search-form">
-            <input type="text" placeholder="Tìm kiếm..." class="form-control">
+          <form action="#" method="post" id="header-search-form">
+            <input type="text" placeholder="Tìm kiếm..." class="form-control" name="search">
             <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
           </form>
         </div>
