@@ -99,11 +99,11 @@ error_reporting(0);
                 $where .= "";
               }
               $sql1 .= $where; 
-              $cnt = 1;
               $query1 = mysqli_query($conn, $sql1);
               $data = mysqli_fetch_all($query1, MYSQLI_ASSOC);
+              $cnt = mysqli_num_rows($query1);
               ?>
-              <p><span><?php echo htmlentities($cnt); ?> Danh sách</span></p>
+              <p><span><?php echo $cnt; ?> Sản phẩm</span></p>
             </div>
           </div>
 
