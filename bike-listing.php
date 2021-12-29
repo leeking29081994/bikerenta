@@ -99,16 +99,16 @@ error_reporting(0);
                 $where .= "";
               }
               $sql1 .= $where; 
-              $cnt = 1;
               $query1 = mysqli_query($conn, $sql1);
               $data = mysqli_fetch_all($query1, MYSQLI_ASSOC);
+              $cnt = mysqli_num_rows($query1);
               ?>
-              <p><span><?php echo htmlentities($cnt); ?> Danh sách</span></p>
+              <p><span><?php echo $cnt; ?> Sản phẩm trong danh sách</span></p>
             </div>
           </div>
 
           <?php
-          //if ($query->rowCount() > 0) {
+          if ($cnt > 0) {
             foreach($data as $key => $result){ ?>
 
          <div class="product-listing-m gray-bg">
@@ -126,7 +126,7 @@ error_reporting(0);
                 </div>
               </div>
           <?php }
-          //} 
+          } 
           ?>
         </div>
 
